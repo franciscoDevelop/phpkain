@@ -1,11 +1,16 @@
 <?php
 
+use Symfony\Component\Yaml\Yaml;
+use Phpkain\File\File;
+
+$params = Yaml::parseFile(File::root().File::ds().'.env');
+
 return [
-  'host' => 'localhost',
-  'port' => '3306',
-  'database' => 'phpkain',
-  'username' => 'root',
-  'password' => '',
-  'charset' => 'utf8mb4',
-  'collation' => 'utf8mb4_unicode_ci',
+  'host' => $params['MYSQL']['host'],
+  'port' => $params['MYSQL']['port'],
+  'database' => $params['MYSQL']['database'],
+  'username' => $params['MYSQL']['username'],
+  'password' => $params['MYSQL']['password'],
+  'charset' => $params['MYSQL']['charset'],
+  'collation' => $params['MYSQL']['collation']
 ];
