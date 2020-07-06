@@ -2,6 +2,7 @@
 const path = require('path');
 var webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
   context: __dirname,
@@ -82,7 +83,18 @@ module.exports = {
   },
   devtool: '#eval-source-map',
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new BrowserSyncPlugin({
+      host: 'humanresources.test',
+      port: 3000,
+      proxy: "humanresources.test",
+      open: "external",
+      files: [
+        './views/**/*.blade.php'
+      ]
+    }, {
+      reload: true
+    })
   ]
 }
 if (process.env.NODE_ENV === 'production') {

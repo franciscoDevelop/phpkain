@@ -1,18 +1,13 @@
 {
-  "name": "francisco-rodriguez/phpkain",
-  "version": "1.0.0",
-  "description": "phpkain is simple base php framework",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "webpack --watch --mode=development",
     "prod": "webpack --mode=production"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",
     "path": "^0.12.7",
@@ -22,7 +17,6 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "vue": "^2.6.11",
-    "vue-loading-overlay": "^3.3.2"
+    "vue": "^2.6.11"
   }
 }
