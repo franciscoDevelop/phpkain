@@ -85,9 +85,9 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new BrowserSyncPlugin({
-      host: 'humanresources.test',
+      host: 'localhost',
       port: 3000,
-      proxy: "humanresources.test",
+      proxy: "localhost",
       open: "external",
       files: [
         './views/**/*.blade.php'

@@ -19,7 +19,11 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "sweetalert2": "^9.15.3",
+    "v-money": "^0.8.1",
+    "vform": "^1.0.1",
     "vue": "^2.6.11",
-    "vue-loading-overlay": "^3.3.2"
+    "vue-loading-overlay": "^3.3.2",
+    "vue-progressbar": "^0.7.5"
   }
 }
