@@ -42,7 +42,8 @@ module.exports = {
       test: /\.css$/,
       use: [
         'vue-style-loader',
-        'css-loader'
+        'css-loader',
+        'sass-loader',
       ]
     }, {
       test: /\.scss$/,
@@ -87,7 +88,7 @@ module.exports = {
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
-      proxy: "localhost",
+      proxy: 'localhost',
       open: "external",
       files: [
         './views/**/*.blade.php'
